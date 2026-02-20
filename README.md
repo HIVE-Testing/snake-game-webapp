@@ -43,6 +43,11 @@ To run this game locally:
    
 The game will be accessible at http://localhost:8080
 
+## Changes Made
+
+- **Higher Contrast Grid**: The grid background now has higher contrast for better visibility
+- **Slower Snake Movement**: The snake moves at a more manageable pace for better gameplay
+
 ## Technical Details
 
 ### Visual Effects
