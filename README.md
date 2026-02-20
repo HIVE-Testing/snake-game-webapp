@@ -29,6 +29,20 @@ An immersive snake game with stunning visual effects and sound design. This clas
 - **Reset** button - Reset the game state
 - **Play Again** button - Start a new game after game over
 
+## Running the Game
+
+To run this game locally:
+
+1. Clone or download this repository
+2. Open `index.html` in your web browser (no server needed for basic functionality)
+3. Or use the provided script:
+   ```bash
+   chmod +x run.sh
+   ./run.sh
+   ```
+   
+The game will be accessible at http://localhost:8080
+
 ## Technical Details
 
 ### Visual Effects
@@ -51,7 +65,9 @@ snake-game-webapp/
 ├── index.html          # Main HTML structure
 ├── style.css           # Styling and visual effects
 ├── script.js           # Game logic and sound handling
-└── README.md           # Project documentation
+├── README.md           # Project documentation
+├── PROJECT_INFO.md     # Project information
+└── run.sh              # Deployment script
 ```
 
 ## Requirements
