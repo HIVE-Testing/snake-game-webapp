@@ -23,7 +23,7 @@ let direction = 'right';
 let nextDirection = 'right';
 let score = 0;
 let highScore = localStorage.getItem('snakeHighScore') || 0;
-let gameSpeed = 120;
+let gameSpeed = 200; // Slower movement speed
 let gameRunning = false;
 let gameLoop;
 
@@ -75,7 +75,7 @@ function draw() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.8)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    // Draw grid background
+    // Draw grid background with higher contrast
     drawGrid();
     
     // Draw snake
@@ -131,11 +131,12 @@ function draw() {
     ctx.fillRect(food.x * 20 + 9, food.y * 20 + 2, 2, 4);
 }
 
-// Draw grid background
+// Draw grid background with higher contrast
 function drawGrid() {
     const gridSize = 20;
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
-    ctx.lineWidth = 0.5;
+    // Use higher contrast for grid lines
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+    ctx.lineWidth = 1;
     
     // Vertical lines
     for (let x = 0; x <= canvas.width; x += gridSize) {
@@ -207,8 +208,8 @@ function moveSnake() {
         // Generate new food
         generateFood();
         
-        // Increase speed slightly
-        if (gameSpeed > 60) {
+        // Increase speed slightly (but keep it slower overall)
+        if (gameSpeed > 80) {
             gameSpeed -= 2;
         }
     } else {
